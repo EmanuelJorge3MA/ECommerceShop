@@ -12,7 +12,7 @@ class LoginPageModel: ObservableObject {
     // Login Properties..
     @Published var email: String = ""
     @Published var password: String = ""
-    @Published var showPassowrd: Bool = false
+    @Published var showPassword: Bool = false
     
     // Register Properties
     @Published var registerUser: Bool = false

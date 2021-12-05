@@ -11,6 +11,9 @@ import SwiftUI
 let customFont = "Raleway-Regular"
 
 struct OnBoardingPage: View {
+    // Showing Login Page...
+    @State var showLoginPage: Bool = false
+    
     var body: some View {
         
         VStack(alignment: .leading) {
@@ -24,7 +27,9 @@ struct OnBoardingPage: View {
                 .aspectRatio(contentMode: .fit)
             
             Button {
-                
+                withAnimation {
+                    showLoginPage = true
+                }
             } label: {
                 Text("Get started")
                     .font(.custom(customFont, size: 18))
@@ -47,6 +52,14 @@ struct OnBoardingPage: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(
             Color(.purple) // MARK: - Definir Cor no Assets
+        )
+        .overlay(
+            Group {
+                if showLoginPage {
+                    LoginPage()
+                        .transition(.move(edge: .bottom))
+                }
+            }
         )
     }
 }
