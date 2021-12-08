@@ -29,7 +29,7 @@ struct MainPage: View {
                 Text("Liked")
                     .tag(Tab.Liked)
                 
-                Text("Profile")
+                ProfilePage()
                     .tag(Tab.Profile)
                 
                 Text("Cart")
@@ -50,7 +50,7 @@ struct MainPage: View {
                             .frame(width: 22, height: 22)
                         //Applying little shadow at bg...
                             .background(
-                                Color.purple // MARK: - Definir Cor no Assets
+                                Color("Purple") // MARK: - Definir Cor no Assets
                                     .opacity(0.1)
                                     .cornerRadius(5)
                                 // blurring...
@@ -61,14 +61,14 @@ struct MainPage: View {
                                 
                             )
                             .frame(maxWidth: .infinity)
-                            .foregroundColor(currentTab == tab ? .purple : Color.black.opacity(0.3)) // MARK: - Definir Cor no Assets
+                            .foregroundColor(currentTab == tab ? Color("Purple") : Color.black.opacity(0.3)) // MARK: - Definir Cor no Assets
                     }
                 }
             }
             .padding([.horizontal, .top])
             .padding(.bottom, 10)
         }
-        .background(Color.gray.opacity(0.2).ignoresSafeArea()) // MARK: - Definir Cor no Assets
+        .background(Color("HomeBG").ignoresSafeArea()) // MARK: - Definir Cor no Assets
     }
 }
 

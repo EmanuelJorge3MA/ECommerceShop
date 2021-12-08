@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F60CD6BA276162CE00073205 /* StaggeredGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60CD6B9276162CE00073205 /* StaggeredGrid.swift */; };
+		F60CD6BC276170E800073205 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60CD6BB276170E800073205 /* ProfilePage.swift */; };
 		F63B8C79275A415800A6C028 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F63B8C76275A415800A6C028 /* Raleway-SemiBold.ttf */; };
 		F63B8C7A275A415800A6C028 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F63B8C76275A415800A6C028 /* Raleway-SemiBold.ttf */; };
 		F63B8C7B275A415800A6C028 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F63B8C77275A415800A6C028 /* Raleway-Bold.ttf */; };
@@ -18,6 +20,7 @@
 		F63B8C87275A5CFD00A6C028 /* LoginPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63B8C86275A5CFD00A6C028 /* LoginPageModel.swift */; };
 		F63B8C89275A68E300A6C028 /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63B8C88275A68E300A6C028 /* CustomCorners.swift */; };
 		F64A29E9275E183E004F3A9F /* MoreProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64A29E8275E183E004F3A9F /* MoreProductsView.swift */; };
+		F654B669275E3FF400193464 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F654B668275E3FF300193464 /* SearchView.swift */; };
 		F66DB453275D301600CB02C6 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66DB452275D301600CB02C6 /* MainPage.swift */; };
 		F66DB456275D36B900CB02C6 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66DB455275D36B900CB02C6 /* Home.swift */; };
 		F6A10BD1275D50E700E51E77 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A10BD0275D50E700E51E77 /* Product.swift */; };
@@ -31,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F60CD6B9276162CE00073205 /* StaggeredGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaggeredGrid.swift; sourceTree = "<group>"; };
+		F60CD6BB276170E800073205 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
 		F63B8C76275A415800A6C028 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
 		F63B8C77275A415800A6C028 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
 		F63B8C78275A415800A6C028 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
@@ -40,6 +45,7 @@
 		F63B8C86275A5CFD00A6C028 /* LoginPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageModel.swift; sourceTree = "<group>"; };
 		F63B8C88275A68E300A6C028 /* CustomCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
 		F64A29E8275E183E004F3A9F /* MoreProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreProductsView.swift; sourceTree = "<group>"; };
+		F654B668275E3FF300193464 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		F66DB452275D301600CB02C6 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		F66DB455275D36B900CB02C6 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		F6A10BD0275D50E700E51E77 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -89,6 +95,8 @@
 				F63B8C88275A68E300A6C028 /* CustomCorners.swift */,
 				F66DB452275D301600CB02C6 /* MainPage.swift */,
 				F64A29E8275E183E004F3A9F /* MoreProductsView.swift */,
+				F654B668275E3FF300193464 /* SearchView.swift */,
+				F60CD6B9276162CE00073205 /* StaggeredGrid.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -106,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				F66DB455275D36B900CB02C6 /* Home.swift */,
+				F60CD6BB276170E800073205 /* ProfilePage.swift */,
 			);
 			path = TabViews;
 			sourceTree = "<group>";
@@ -266,11 +275,14 @@
 				F63B8C84275A5C3E00A6C028 /* LoginPage.swift in Sources */,
 				F64A29E9275E183E004F3A9F /* MoreProductsView.swift in Sources */,
 				F63B8C89275A68E300A6C028 /* CustomCorners.swift in Sources */,
+				F60CD6BA276162CE00073205 /* StaggeredGrid.swift in Sources */,
 				F6A10BD1275D50E700E51E77 /* Product.swift in Sources */,
+				F654B669275E3FF400193464 /* SearchView.swift in Sources */,
 				F6A10BD3275D564400E51E77 /* HomeViewModel.swift in Sources */,
 				F63B8C87275A5CFD00A6C028 /* LoginPageModel.swift in Sources */,
 				F6C5ACD5275A3C7800E869EC /* ContentView.swift in Sources */,
 				F63B8C82275A42F600A6C028 /* OnBoardingPage.swift in Sources */,
+				F60CD6BC276170E800073205 /* ProfilePage.swift in Sources */,
 				F66DB453275D301600CB02C6 /* MainPage.swift in Sources */,
 				F66DB456275D36B900CB02C6 /* Home.swift in Sources */,
 				F6C5ACD3275A3C7800E869EC /* ECommerceShopApp.swift in Sources */,

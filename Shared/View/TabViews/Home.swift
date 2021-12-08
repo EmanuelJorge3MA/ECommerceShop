@@ -16,23 +16,23 @@ struct Home: View {
             VStack(spacing: 15) {
                 
                 // Search Bar...
-                HStack(spacing: 15) {
-                    Image(systemName: "magnifyingglass")
-                        .font(.title2)
-                        .foregroundColor(.gray)
-                    
-                    // Since we need a separate view for search bar...
-                    TextField("Search", text: .constant(""))
-                        .disabled(true)
+                ZStack{
+                    if homeData.searchActivated {
+                        SearchBar()
+                    }
+                    else {
+                        SearchBar()
+                            .matchedGeometryEffect(id: "SEARCHBAR", in: animation)
+                    }
                 }
-                .padding(.vertical, 12)
-                .padding(.horizontal)
-                .background(
-                    Capsule()
-                        .strokeBorder(.purple, lineWidth: 0.8)
-                )
                 .frame(width: getRect().width / 1.6)
                 .padding(.horizontal, 25)
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    withAnimation(.easeInOut){
+                        homeData.searchActivated = true
+                    }
+                }
                 
                 Text("Order online\ncollect in store")
                     .font(.custom(customFont, size: 28).bold())
@@ -83,7 +83,7 @@ struct Home: View {
                         Text("see more")
                     }
                     .font(.custom(customFont, size: 15).bold())
-                    .foregroundColor(.purple) // MARK: - Definir Cor no Assets
+                    .foregroundColor(Color("Purple")) // MARK: - Definir Cor no Assets
                 }
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .padding(.trailing)
@@ -92,7 +92,7 @@ struct Home: View {
             .padding(.vertical)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(.gray.opacity(0.2)) // MARK: - Definir Cor no Assets
+        .background(Color("HomeBG")) // MARK: - Definir Cor no Assets
         // Updating data whenever tab changes...
         .onChange(of: homeData.productType) { newValue in
             homeData.filterProductByType()
@@ -103,7 +103,38 @@ struct Home: View {
         } content: {
             MoreProductsView()
         }
-
+        // Displaying Search View...
+        .overlay(
+            ZStack{
+                if homeData.searchActivated {
+                    SearchView(animation: animation)
+                        .environmentObject(homeData)
+                }
+            }
+        )
+    }
+    
+    // Since we're adding matched geometry effect...
+    // avoiding code replication...
+    @ViewBuilder
+    func SearchBar()->some View {
+        
+        HStack(spacing: 15) {
+            Image(systemName: "magnifyingglass")
+                .font(.title2)
+                .foregroundColor(.gray)
+            
+            // Since we need a separate view for search bar...
+            TextField("Search", text: .constant(""))
+                .disabled(true)
+        }
+        .padding(.vertical, 12)
+        .padding(.horizontal)
+        .background(
+            
+            Capsule()
+                .strokeBorder(Color.gray, lineWidth: 0.8) // MARK: - Definir Cor no Assets
+        )
     }
     
     @ViewBuilder
@@ -131,7 +162,7 @@ struct Home: View {
             Text(product.price)
                 .font(.custom(customFont, size: 16))
                 .fontWeight(.bold)
-                .foregroundColor(.purple) // MARK: - Definir Cor no Assets
+                .foregroundColor(Color("Purple")) // MARK: - Definir Cor no Assets
                 .padding(.top, 5)
         }
         .padding(.horizontal, 20)
@@ -154,15 +185,16 @@ struct Home: View {
                 .font(.custom(customFont, size: 15))
                 .fontWeight(.semibold)
             // Changing Color based on Current product Type...
-                .foregroundColor(homeData.productType == type ? .purple : .gray)
+                .foregroundColor(homeData.productType == type ? Color("Purple") : .gray)
                 .padding(.bottom, 10)
         // Adding Indicator at bottom...
                 .overlay(
+                    
                     // Adding Matched Geometry Effect...
                     ZStack{
                         if homeData.productType == type {
                             Capsule()
-                                .fill(.purple)
+                                .fill(Color("Purple"))
                                 .matchedGeometryEffect(id: "PRODUCTTAB", in: animation)
                                 .frame(height: 2)
                         }

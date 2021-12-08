@@ -17,7 +17,7 @@ struct MoreProductsView: View {
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        .background(Color.gray.opacity(0.1).ignoresSafeArea())
+        .background(Color("HomeBG").ignoresSafeArea())
     }
 }
 
