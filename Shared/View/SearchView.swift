@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct SearchView: View {
-     var animation: Namespace.ID
+   var animation: Namespace.ID
     
-    @EnvironmentObject var homeData: HomeViewModel
+    // Shared Data...
+    @EnvironmentObject var sharedData: SharedDataModel
+    
+   @EnvironmentObject var homeData: HomeViewModel
     
     // Activating Text Field with the help of Focus
    @FocusState var startTF: Bool
@@ -28,6 +31,8 @@ struct SearchView: View {
                         homeData.searchActivated = false
                     }
                     homeData.searchText = ""
+                    // Resetting...
+                    sharedData.fromSearchPage = false
                 } label: {
                     Image(systemName: "arrow.left")
                         .font(.title2)
@@ -128,11 +133,23 @@ struct SearchView: View {
     func ProductCardView(product: Product)->some View {
         
         VStack(spacing: 10) {
-            Image(product.productImage)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                //.frame(width: getRect().width / 2.5, height: getRect().width / 2.5)
             
+            ZStack {
+                if sharedData.showDetailProduct {
+                    Image(product.productImage)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        //.frame(width: getRect().width / 2.5, height: getRect().width / 2.5)
+                        .opacity(0)
+                }
+                else {
+                    Image(product.productImage)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        //.frame(width: getRect().width / 2.5, height: getRect().width / 2.5)
+                        .matchedGeometryEffect(id: "\(product.id)SEARCH", in: animation)
+                }
+            }
             // Moving image to top to look like its fixed at half top...
                 .offset(y: -50)
                 .padding(.bottom, -50)
@@ -159,11 +176,18 @@ struct SearchView: View {
                 .cornerRadius(25)
         )
         .padding(.top, 50)
+        .onTapGesture {
+            withAnimation(.easeInOut) {
+                sharedData.fromSearchPage = true
+                sharedData.detailProduct = product
+                sharedData.showDetailProduct = true
+            }
+        }
     }
 }
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        Home()
+        MainPage()
     }
 }

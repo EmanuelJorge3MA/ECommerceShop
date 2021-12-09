@@ -78,9 +78,9 @@ struct StaggeredGrid<Content: View, T: Identifiable>: View where T: Hashable {
         return index
     }
 }
-
-struct StaggeredGrid_Previews: PreviewProvider {
-    static var previews: some View {
-        Home()
-    }
-}
+//
+//struct StaggeredGrid_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Home()
+//    }
+//}
