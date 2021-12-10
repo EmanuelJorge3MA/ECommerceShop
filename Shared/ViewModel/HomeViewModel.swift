@@ -16,13 +16,36 @@ class HomeViewModel: ObservableObject {
     
     // Sample Products...
     @Published var products: [Product] = [
-        Product(type: .Wearable, title: "Apple Watch", subtitle: "Series 6: Red", price: "$369", productImage: "gadget"),
-        Product(type: .Wearable, title: "Apple Watch", subtitle: "Series 6: Red", price: "$369", productImage: "gadget"),
-        Product(type: .Laptops, title: "Apple Watch", subtitle: "Series 6: Red", price: "$369", productImage: "gadget"),
-        Product(type: .Wearable, title: "Apple Watch", subtitle: "Series 6: Red", price: "$369", productImage: "gadget"),
-        Product(type: .Phones, title: "Apple Watch", subtitle: "Series 6: Red", price: "$369", productImage: "gadget"),
-        Product(type: .Wearable, title: "Apple Watch", subtitle: "Series 6: Red", price: "$369", productImage: "gadget"),
-        Product(type: .Wearable, title: "Apple Watch", subtitle: "Series 6: Red", price: "$369", productImage: "gadget")
+        Product(type: .Wearable, title: "OnePlus", subtitle: "Black v3", price: "$209", productImage: "watch1"),
+        Product(type: .Wearable, title: "Apple Watch", subtitle: "13 - Black", price: "$109", productImage: "watch2"),
+        Product(type: .Wearable, title: "OnePlus", subtitle: "White", price: "$129", productImage: "watch3"),
+        Product(type: .Wearable, title: "Apple Watch", subtitle: "Series 7", price: "$189", productImage: "watch4"),
+        Product(type: .Wearable, title: "Huawei", subtitle: "GT 3", price: "$219", productImage: "watch5"),
+        Product(type: .Wearable, title: "Xiaomi", subtitle: "Mi Band 5", price: "$309", productImage: "watch6"),
+        
+        Product(type: .Phones, title: "iPhone", subtitle: "13 - Rose", price: "$999", productImage: "iphone1"),
+        Product(type: .Phones, title: "Samsung", subtitle: "Galaxy Z Flip", price: "$589", productImage: "sg1"),
+        Product(type: .Phones, title: "iPhone", subtitle: "13 - Gold", price: "$999", productImage: "iphone2"),
+        Product(type: .Phones, title: "iPhone", subtitle: "13 - Black", price: "$999", productImage: "iphone3"),
+        Product(type: .Phones, title: "iPhone", subtitle: "13 - Purple", price: "$899", productImage: "iphone4"),
+        Product(type: .Phones, title: "Xiaomi", subtitle: "Redmi Note 8", price: "$799", productImage: "huawei1"),
+        Product(type: .Phones, title: "Xiaomi", subtitle: "M1 9 GreenLand", price: "$669", productImage: "huawei2"),
+        Product(type: .Phones, title: "Xiaomi", subtitle: "M1 11 Gold", price: "$899", productImage: "huawei3"),
+        Product(type: .Phones, title: "Samsung", subtitle: "Galaxy S20", price: "$869", productImage: "android1"),
+        Product(type: .Phones, title: "Huawei", subtitle: "GT 2", price: "$599", productImage: "red1"),
+        Product(type: .Phones, title: "Samsung", subtitle: "Galaxy S19", price: "$599", productImage: "sg3"),
+        
+        Product(type: .Laptops, title: "MacBook Pro", subtitle: "M1 Max", price: "$2269", productImage: "mac2"),
+        Product(type: .Laptops, title: "MacBook Pro", subtitle: "M1 Pro", price: "$1869", productImage: "mac3"),
+        Product(type: .Laptops, title: "HP", subtitle: "Series Omen", price: "$1869", productImage: "hpomen1"),
+        Product(type: .Laptops, title: "MacBook Desk", subtitle: "M1 mini", price: "$1269", productImage: "macdek1"),
+        Product(type: .Laptops, title: "MacBook Air", subtitle: "Air Intel", price: "$1169", productImage: "mackair1"),
+        Product(type: .Laptops, title: "MacBook Desk", subtitle: "Intel 8", price: "$1369", productImage: "mackdek2"),
+        
+    
+        Product(type: .Tablets, title: "iPad", subtitle: "Pro", price: "$469", productImage: "ipad1"),
+        Product(type: .Tablets, title: "iPad", subtitle: "Pro", price: "$769", productImage: "ipad2"),
+        Product(type: .Tablets, title: "iPad", subtitle: "Pro", price: "$969", productImage: "ipad3")
     ]
     
     // Filtered Products...
