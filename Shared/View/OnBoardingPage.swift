@@ -39,7 +39,7 @@ struct OnBoardingPage: View {
                     .background(Color.white)
                     .cornerRadius(10)
                     .shadow(color: Color.black.opacity(0.1), radius: 5, x: 5, y: 5)
-                    .foregroundColor(.purple) // MARK: - Definir Cor no Assets
+                    .foregroundColor(Color("Purple")) // MARK: - Definir Cor no Assets
             }
             .padding(.horizontal, 30)
             // Adding Some Adjustments Only for larger displays...
@@ -51,7 +51,7 @@ struct OnBoardingPage: View {
         .padding(.top, getRect().height < 750 ? 0 : 20)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(
-            Color(.purple) // MARK: - Definir Cor no Assets
+            Color("Purple") // MARK: - Definir Cor no Assets
         )
         .overlay(
             Group {

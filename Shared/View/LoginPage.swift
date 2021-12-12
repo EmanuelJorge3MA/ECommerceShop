@@ -16,7 +16,7 @@ struct LoginPage: View {
             
             // Welcome Back text for 3 half of the screen...
             
-                Text("Welcome\nback")
+                Text("Welcome\nto 3SHOP")
                     .font(.custom(customFont, size: 55).bold())
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -28,9 +28,9 @@ struct LoginPage: View {
                            
                             // Gradient Circle...
                             LinearGradient(colors: [
-                                Color(.purple), // MARK: - Definir Cor no Assets
+                                Color("Purple"), // MARK: - Definir Cor no Assets
                                 Color(.blue).opacity(0.2), // MARK: - Definir Cor no Assets
-                                Color(.purple) // MARK: - Definir Cor no Assets
+                                Color("Purple") // MARK: - Definir Cor no Assets
                             ], startPoint: .top, endPoint: .bottom)
                                 .frame(width: 100, height: 100)
                                 .clipShape(Circle())
@@ -84,7 +84,7 @@ struct LoginPage: View {
                         Text("Forgot password?")
                             .font(.custom(customFont, size: 14))
                             .fontWeight(.semibold)
-                            .foregroundColor(.purple) // MARK: - Definir Cor no Assets
+                            .foregroundColor(Color("Purple")) // MARK: - Definir Cor no Assets
                     }
                     .padding(.top, 8)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -103,7 +103,7 @@ struct LoginPage: View {
                             .padding(.vertical, 20)
                             .frame(maxWidth: .infinity)
                             .foregroundColor(.white) // MARK: - Definir Cor no Assets
-                            .background(.purple) // MARK: - Definir Cor no Assets
+                            .background(Color("Purple")) // MARK: - Definir Cor no Assets
                             .cornerRadius(15)
                             .shadow(color: Color.black.opacity(0.07), radius: 5, x: 5, y: 5)
                     }
@@ -120,7 +120,7 @@ struct LoginPage: View {
                         Text(loginData.registerUser ? "Back to login" : "Create account")
                             .font(.custom(customFont, size: 14))
                             .fontWeight(.semibold)
-                            .foregroundColor(.purple) // MARK: - Definir Cor no Assets
+                            .foregroundColor(Color("Purple")) // MARK: - Definir Cor no Assets
                     }
                     .padding(.top, 8)
                     
@@ -136,7 +136,7 @@ struct LoginPage: View {
             )
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(.purple) // MARK: - Definir Cor no Assets
+        .background(Color("Purple")) // MARK: - Definir Cor no Assets
         
         // Clearing data when  Change...
         // Optional...
@@ -182,7 +182,7 @@ struct LoginPage: View {
                     }, label: {
                         Text(showPassword.wrappedValue ? "Hiden" : "Show")
                             .font(.custom(customFont, size: 13).bold())
-                            .foregroundColor(.purple) // MARK: - Definir Cor no Assets
+                            .foregroundColor(Color("Purple")) // MARK: - Definir Cor no Assets
                     })
                         .offset(y: 8)
                 }

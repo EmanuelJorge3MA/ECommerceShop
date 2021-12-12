@@ -18,7 +18,7 @@ struct ProfilePage: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
                     VStack(spacing: 15) {
-                        Image("gadget")
+                        Image("pc1")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 60, height: 60)
@@ -26,7 +26,7 @@ struct ProfilePage: View {
                             .offset(y: -30)
                             .padding(.bottom, -30)
                         
-                        Text("Rosina Doe")
+                        Text("Gaspar Clemente")
                             .font(.custom(customFont, size: 16))
                             .fontWeight(.semibold)
                         
@@ -35,7 +35,7 @@ struct ProfilePage: View {
                                 .foregroundColor(.gray)
                                 .rotationEffect(.init(degrees: 180))
                             
-                            Text("Address: 43 Oxford Road\nM13 4GR\nManchester, UK")
+                            Text("Address: France, Paris, lasvossuire")
                                 .font(.custom(customFont, size: 15))
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
