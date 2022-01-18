@@ -26,7 +26,7 @@ struct ProfilePage: View {
                             .offset(y: -30)
                             .padding(.bottom, -30)
                         
-                        Text("Gaspar Clemente")
+                        Text("Emanuel Jorge")
                             .font(.custom(customFont, size: 16))
                             .fontWeight(.semibold)
                         
